@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  challenge_api:
+    container_name: challange_api
+    build:
+      context: .
+      dockerfile: ./backend/api/Dockerfile
+    restart: always
+    working_dir: /app/api
+    volumes:
+      - .:/app
+    ports:
+      - '3010:3010'
+    command: yarn run start
+    env_file:
+      - .env
+
+  challenge_db:
+    container_name: challenge_db
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: "challenge_db_dev"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "AXJs82Km4N3j26snbL9"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+volumes:
+  pgdata:
