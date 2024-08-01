@@ -24,19 +24,19 @@ const HomePage: React.FC = () => {
         <div>
             <h1>Home Page</h1>
             <Link href="/register-player">
-                <a>Register Player</a>
+                Register Player
             </Link>
             <Link href="/create-game">
-                <a>Create Game</a>
+                Create Game
             </Link>
             <h2>Jogos Futuros</h2>
             <ul>
                 {games.map((game) => (
                     <li key={game.id}>
                         <Link href={`/game/${game.id}`}>
-                            <a>
-                                {new Date(game.date).toLocaleString()} - Número mínimo de jogadores: {game.minPlayers}
-                            </a>
+
+                            {new Date(game.date).toLocaleString()}- Número mínimo de jogadores:{game.minPlayers}
+
                         </Link>
                     </li>
                 ))}
