@@ -2,19 +2,8 @@
 
 ## Run
 
-### With docker
-```sh
-docker-compose -f docker-compose.yml up
-```
+### Backend
+[Backend Readme](./backend/README.md)
 
-### Without docker
-
-#### Start the backend
-```sh
-cd backend/api && yarn start:dev 
-```
-
-#### Start the frontend
-```sh
-cd frontend && yarn start:dev 
-```
+### Frontend
+[Frontend Readme](./frontend/README.md)
