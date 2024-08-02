@@ -4,9 +4,9 @@
 ## Run
 ```sh
 npm install
-npm build-docker
-npm db-seed
+npm run docker-build
 npm run docker
+npm run docker-init-check
 ```
 
 ## Folder structure

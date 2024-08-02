@@ -7,12 +7,11 @@
     "dev": "npx ts-node src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "build-docker": "docker-compose up --build",
-    "db-seed": "docker exec -it soccer_db psql -U soccer_user -d soccer_db -f ./src/database/schema.sql",
+    "docker-build": "docker-compose up --build",
     "docker": "docker-compose -f docker-compose.yml up",
     "mac-build-docker": "docker compose up --build",
-    "mac-db-seed": "docker exec -it soccer_db psql -U soccer_user -d soccer_db -f ./src/database/schema.sql",
-    "mac-docker": "docker compose -f docker-compose.yml up"
+    "mac-docker": "docker compose -f docker-compose.yml up",
+    "docker-init-check": "docker exec -it soccer_db psql -U postgres -d soccer_db -c '\\dt'"
   },
   "author": "Jeferson Eduardo Guido",
   "license": "ISC",
