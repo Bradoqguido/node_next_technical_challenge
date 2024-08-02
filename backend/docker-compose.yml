@@ -1,19 +1,19 @@
 version: '3.8'
 
 services:
-  db:
+  soccer_db:
     image: postgres:13
     container_name: soccer_db
     environment:
-      POSTGRES_USER: soccer_user
-      POSTGRES_PASSWORD: soccer_password
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
       POSTGRES_DB: soccer_db
     ports:
       - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
 
-  backend:
+  soccer-backend:
     build: .
     container_name: soccer_backend
     environment:
@@ -21,7 +21,7 @@ services:
     ports:
       - "5000:5000"
     depends_on:
-      - db
+      - soccer_db
 
 volumes:
   db-data:

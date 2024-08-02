@@ -4,7 +4,12 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx ts-node src/server.ts"
+    "dev": "npx ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "build-docker": "docker-compose up --build",
+    "db-seed": "docker exec -it soccer_db psql -U soccer_user -d soccer_db -f ./src/database/schema.sql",
+    "docker": "docker-compose -f docker-compose.yml up"
   },
   "author": "Jeferson Eduardo Guido",
   "license": "ISC",
