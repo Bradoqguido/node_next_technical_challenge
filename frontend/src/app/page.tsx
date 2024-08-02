@@ -1,10 +1,12 @@
+"use client"
 import React from 'react';
-import HomePage from './components/HomePage';
+import Layout from "@/app/components/Layout";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <HomePage />;
+        <h1>Dashboard</h1>
+        <Layout/>
     </main>
   );
 }
