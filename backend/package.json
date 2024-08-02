@@ -9,7 +9,10 @@
     "start": "node dist/server.js",
     "build-docker": "docker-compose up --build",
     "db-seed": "docker exec -it soccer_db psql -U soccer_user -d soccer_db -f ./src/database/schema.sql",
-    "docker": "docker-compose -f docker-compose.yml up"
+    "docker": "docker-compose -f docker-compose.yml up",
+    "mac-build-docker": "docker compose up --build",
+    "mac-db-seed": "docker exec -it soccer_db psql -U soccer_user -d soccer_db -f ./src/database/schema.sql",
+    "mac-docker": "docker compose -f docker-compose.yml up"
   },
   "author": "Jeferson Eduardo Guido",
   "license": "ISC",
