@@ -21,6 +21,6 @@ RUN npm install --only=production
 
 COPY --from=builder /app/dist ./dist
 
-EXPOSE 5000
+EXPOSE 2999
 
 CMD ["node", "dist/server.js"]

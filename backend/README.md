@@ -4,8 +4,9 @@
 ## Run
 ```sh
 npm install
-docker-compose -f docker-compose.yml up
-npm run dev
+npm build-docker
+npm db-seed
+npm run docker
 ```
 
 ## Folder structure

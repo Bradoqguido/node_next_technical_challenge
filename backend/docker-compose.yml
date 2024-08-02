@@ -13,13 +13,13 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
 
-  soccer-backend:
+  soccer-api:
     build: .
-    container_name: soccer_backend
+    container_name: soccer_api
     environment:
       DATABASE_URL: postgres://soccer_user:soccer_password@db:5432/soccer_db
     ports:
-      - "5000:5000"
+      - "2999:2999"
     depends_on:
       - soccer_db
 
