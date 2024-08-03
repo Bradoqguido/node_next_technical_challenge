@@ -7,7 +7,7 @@ type Team = {
     name: string;
 };
 
-const Teams = () => {
+const GameTeams = () => {
     const [teams, setTeams] = useState<Team[]>([]);
 
     useEffect(() => {
@@ -37,4 +37,4 @@ const Teams = () => {
     );
 };
 
-export default Teams;
+export default GameTeams;

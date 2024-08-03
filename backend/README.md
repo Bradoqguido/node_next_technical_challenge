@@ -21,7 +21,7 @@ Games Routes:
 - GET /api/v1/games: Retrieve all games.
 - POST /api/v1/games: Create a new game.
 
-Teams Routes:
+GameTeams Routes:
 - GET /api/v1/teams: Retrieve all teams.
 - POST /api/v1/teams: Create a new team.
 - POST /api/v1/teams/add-player: Add a player to a team.

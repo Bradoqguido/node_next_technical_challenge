@@ -1,6 +1,6 @@
-import Players from './Players';
-import Games from './Games';
-import Teams from './Teams';
+import Players from "@/app/components/Player";
+import Games from "@/app/components/Games";
+import GameTeams from "@/app/components/GameTeams";
 
 const Layout = () => {
     return (
@@ -12,10 +12,9 @@ const Layout = () => {
                 <Games />
             </div>
             <div style={{ flex: 1, margin: '0 10px' }}>
-                <Teams />
+                <GameTeams />
             </div>
         </div>
     );
 };
-
 export default Layout;
