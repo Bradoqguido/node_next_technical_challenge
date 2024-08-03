@@ -4,7 +4,6 @@
 ## Run
 ```sh
 npm install
-npm run docker-build
 npm run docker
 npm run docker-init-check
 ```
